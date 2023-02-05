@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--bg-color);
+    font-weight: bolder;
+	color: var(--body-color);
+	display: flex;
+	font-family: 'Muli', sans-serif;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 100vh;
+}
+
+
+p {
+	margin: 5px 0;
+}
+
+
+h2 {
+	margin: 10px 0 20px;
+	text-align: center;
+	color: var(--btn-text-color);
+}
+
+
+input[type=checkbox] {
+	margin-right: 10px;
+}
+
+:root {
+	--bg-color: linear-gradient(rgb(76, 187, 23), rgb(80, 200, 120));
+	--body-color: #000000; 
+	--btn-bg-color: rgb(34, 139, 34);
+	--btn-text-color: #fff;
+	--result-color: rgb(144, 238, 144);
+	--hover-btn-color: darkgreen; 
+}
+
+.dark-theme{
+	--bg-color: linear-gradient(rgb(0, 0, 0), rgb(139, 0, 139));
+	--body-color: #ffffff; 
+	--btn-bg-color: rgba(98, 4, 98, 0.925);
+	--btn-text-color: #fff;
+	--result-color: rgba(166, 7, 166, 0.817);
+	--hover-btn-color: rgba(183, 30, 183, 0.947);
+}
+
+#theme{
+	width: 30px;
+	cursor: pointer;
+	transition: 10s;
+}
+
+
+.container {
+	background: var(--bg-color);
+	box-shadow: 0px 5px 20px rgba(128, 14, 215, 0.168);
+	padding: 20px;
+	width: 350px;
+	max-width: 100%;
+}
+
+.result-container {
+	background-color: var(--result-color);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+    padding-left: 10px;
+	height: 50px;
+	width: 100%;
+}
+
+.result-container #result {
+  	word-wrap: break-word;
+	max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: var(--btn-text-color);
+	cursor: pointer;
+	user-select: none;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: var(--btn-bg-color);
+}
+
+.btn:hover {
+	background-color: var(--hover-btn-color);
+}
+
+#clipboard {
+	font-size: 16px;
+	color: var(--body-color);
+	font-weight: bolder;
+	bottom: initial;
+	transition: 0.1s;
+}
+
+.btn-large {
+	display: block;
+	width: 100%;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}
